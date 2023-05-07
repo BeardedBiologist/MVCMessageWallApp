@@ -14,6 +14,7 @@ builder.Services.AddDefaultIdentity<MVCMessageWallUser>(options => options.SignI
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -28,10 +29,16 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-app.UseAuthentication();;
+app.UseAuthentication();
 
-app.UseAuthorization();
+app.UseEndpoints(app =>
+{
+    app.MapControllers();
+    app.MapRazorPages();
+});
 
+app.MapControllers();
+app.MapRazorPages();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");

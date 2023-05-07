@@ -8,6 +8,7 @@ namespace MVCMessageWall.Models
     {
         [Required]
         [StringLength(10, MinimumLength = 5)]
+        [Display(Name ="Enter your message:")]
         public string Message { get; set; }
     }
 }

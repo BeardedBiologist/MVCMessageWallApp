@@ -30,6 +30,8 @@ namespace MVCMessageWall.Controllers
         {
             try
             {
+                // TO DO: Add insert logic here
+
                 return RedirectToAction(nameof(Index));
             }
             catch

@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MVCMessageWall.Migrations
 {
     [DbContext(typeof(MVCMessageWallContext))]
-    [Migration("20230507105831_CreateIdentitySchema")]
+    [Migration("20230507144720_CreateIdentitySchema")]
     partial class CreateIdentitySchema
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
